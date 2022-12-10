@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap"); */
 
 * {
   margin: 0;
@@ -28,14 +28,17 @@ html {
   font-size: 100px;
   color: rgba(255, 255, 0, 0.671);
 }
+
 .main-div .child-div h1 {
   color: white;
+  font-size: 500%;
 }
 
 .main-div .child-div .input {
   width: 100%;
   justify-content: center;
 }
+
 .main-div .child-div .input input {
   margin-top: 10px;
   width: 300px;
@@ -43,15 +46,16 @@ html {
   margin-left: 20px;
   font-size: 20px;
 }
+
 .main-div .child-div .input button {
   height: 35px;
-  width: 50px;
+  width: 70px;
 }
 
 .main-div .child-div .showitems {
-  background-color: rgb(28, 28, 182);
-  width: 351px;
-  height: 35px;
+  background-color: rgb(28, 182, 36);
+  width: 365px;
+  height: 30px;
   margin-left: 20px;
   font-size: 20px;
   color: white;
@@ -59,28 +63,21 @@ html {
 
 }
 
-.main-div .child-div .showitems h3{
-  margin-left: 3px;
+.main-div .child-div .showitems h3 {
+  margin-left: 10px;
 }
 
-.main-div .child-div .showitems .delete {
+.main-div .child-div .showitems button {
   height: 35px;
-  width: 50px;
-  background-color: rgb(28, 28, 182);
-  border: none;
-  color: white;
-}
-
-.main-div .child-div .showitems .edit {
-  height: 35px;
-  width: 50px;
-  margin-left: 230px;
-  background-color: rgb(28, 28, 182);
+  width: 70px;
+  background-color: rgb(33, 25, 174);
   border: none;
   color: white;
 }
 
 .main-div .child-div .button .btn-secondary {
-  height: 33px;
-  font-size: 15px;
+  margin-left: 15px;
+  height: 50px;
+  width: 365px;
+  font-size: 30px;
 }

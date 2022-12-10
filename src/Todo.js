@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import "./index.css";
-import { Description, Add, Delete, Edit } from "@mui/icons-material";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./index.css";
 
 const Todo = () => {
   const [values, setValues] = useState("");
@@ -45,12 +44,6 @@ const Todo = () => {
     setToggleBtn(false);
   };
 
-  const RemoveAll = () => {
-    setItems([]);
-    setValues("");
-    setToggleBtn(false);
-  };
-
   const EditItems = (id) => {
     // Getting id
     const GetId = items.find((elem) => {
@@ -63,57 +56,68 @@ const Todo = () => {
     console.log(GetId);
   };
 
+  const RemoveAll = () => {
+    setItems([]);
+    setValues("");
+    setToggleBtn(false);
+  };
+
   return (
     <>
-      <div className="main-div ">
+      <div className=" main-div styl">
         <div className="child-div">
-          <Description className="todolog" />
-          <h1>Add Your List Here ✌ </h1>
+          <h1> To-Do :-</h1>
           <div className="input d-flex mt-3">
             <input
               type="text"
-              placeholder="✍ Add Items..."
+              placeholder="Click to add your To-Do"
               value={values}
               onChange={inputValue}
             />
             {toggleBtn ? (
               <>
+                {" "}
                 <button className="btn btn-primary mt-3" onClick={GetValue}>
-                  <Edit />
-                </button>
+                  {" "}
+                  Edit{" "}
+                </button>{" "}
               </>
             ) : (
               <>
+                {" "}
                 <button className="btn btn-primary mt-3" onClick={GetValue}>
-                  <Add />
-                </button>
+                  {" "}
+                  Add{" "}
+                </button>{" "}
               </>
             )}
           </div>
           {items.map((Element) => (
             <div
-              className="showitems d-flex justify-content-between mt-5"
+              className="input showitems d-flex justify-content-between mt-5"
               key={Element.id}
             >
               <h3 className="mt-2">{Element.name}</h3>
               <button
-                className="btn edit"
+                className="btn btn-primary mt-3"
                 onClick={() => EditItems(Element.id)}
               >
-                <Edit />
+                {" "}
+                Edit{" "}
               </button>
               <button
-                className="btn delete"
+                className="btn btn-primary mt-3"
                 onClick={() => DeletedItems(Element.id)}
               >
-                <Delete />
+                {" "}
+                Delete{" "}
               </button>
             </div>
           ))}
-
           <div className="button mt-5">
             <button className="btn btn-secondary" onClick={RemoveAll}>
-              Clear List
+              {" "}
+              Remove All{" "}
             </button>
           </div>
         </div>
@@ -121,5 +125,4 @@ const Todo = () => {
     </>
   );
 };
-
 export default Todo;
