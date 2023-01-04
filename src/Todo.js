@@ -76,48 +76,44 @@ const Todo = () => {
             />
             {toggleBtn ? (
               <>
-                {" "}
                 <button className="btn btn-primary mt-3" onClick={GetValue}>
-                  {" "}
-                  Edit{" "}
-                </button>{" "}
+                  Edit
+                </button>
               </>
             ) : (
               <>
-                {" "}
                 <button className="btn btn-primary mt-3" onClick={GetValue}>
-                  {" "}
-                  Add{" "}
-                </button>{" "}
+                  Add
+                </button>
               </>
             )}
           </div>
           {items.map((Element) => (
-            <div
-              className="input showitems d-flex justify-content-between mt-5"
-              key={Element.id}
-            >
-              <h3 className="mt-2">{Element.name}</h3>
-              <button
-                className="btn btn-primary mt-3"
-                onClick={() => EditItems(Element.id)}
-              >
-                {" "}
-                Edit{" "}
-              </button>
-              <button
-                className="btn btn-primary mt-3"
-                onClick={() => DeletedItems(Element.id)}
-              >
-                {" "}
-                Delete{" "}
-              </button>
+            <div className="input showitems d-flex  mt-5" key={Element.id}>
+              <div className="me-auto p-2">
+                <h3 className="mt-3">{Element.name}</h3>
+              </div>
+              <div className="p-2">
+                <button
+                  className="btn btn-primary mt-2"
+                  onClick={() => EditItems(Element.id)}
+                >
+                  Edit
+                </button>
+              </div>
+              <div className="p-2">
+                <button
+                  className="btn btn-primary mt-2"
+                  onClick={() => DeletedItems(Element.id)}
+                >
+                  Delete
+                </button>
+              </div>
             </div>
           ))}
           <div className="button mt-5">
             <button className="btn btn-secondary" onClick={RemoveAll}>
-              {" "}
-              Remove All{" "}
+              Remove All
             </button>
           </div>
         </div>

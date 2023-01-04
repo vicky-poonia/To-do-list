@@ -54,8 +54,8 @@ html {
 
 .main-div .child-div .showitems {
   background-color: rgb(28, 182, 36);
-  width: 365px;
-  height: 30px;
+  width: 367px;
+  height: 55px;
   margin-left: 20px;
   font-size: 20px;
   color: white;
@@ -70,9 +70,17 @@ html {
 .main-div .child-div .showitems button {
   height: 35px;
   width: 70px;
+  /* margin-right: 10px; */
   background-color: rgb(33, 25, 174);
   border: none;
   color: white;
+}
+
+.Ed{
+  margin-left: 100px;
+}
+.Ed1{
+  margin-left: 10px;
 }
 
 .main-div .child-div .button .btn-secondary {
